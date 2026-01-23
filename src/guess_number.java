@@ -1,7 +1,7 @@
 // Java Program to demonstrates the Number guessing game
 import java.util.Scanner;
 
-public class guess_number {
+public class guess_number {  // class name must match the file name if it is public
     
     public static void guessingNumberGame()
     {
