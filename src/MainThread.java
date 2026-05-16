@@ -1,0 +1,26 @@
+class ThreadA implements Runnable {
+public void run() {
+System.out.println("Even numbers (50-100):");
+for (int i = 50; i <= 100; i++) {
+if (i % 2 == 0)
+System.out.print(i + " ");
+}
+}
+}
+class ThreadB implements Runnable {
+public void run() {
+System.out.println("\nOdd numbers (100-200):");
+for (int i = 100; i <= 200; i++) {
+if (i % 2 != 0)System.out.print(i + " ");
+}
+}
+}
+public class MainThread {
+public static void main(String[] args) {
+
+Thread t1 = new Thread(new ThreadA());
+Thread t2 = new Thread(new ThreadB());
+t1.start();
+t2.start();
+}
+}
